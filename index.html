@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyDownloader</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <div class="tab-content" id="home-tab">
+      <h2>🎬 Enter Video URL</h2>
+      <input type="text" id="videoUrl" placeholder="https://..." />
+      <button id="downloadBtn">Download</button>
+      <p id="status"></p>
+      <div id="ad-banner">
+        <!-- AdsTerra Ad Script -->
+      <!--  <script type="text/javascript">
+          atOptions = {
+            'key': 'your-adsterra-key',
+            'format': 'iframe',
+            'height': 50,
+            'width': 320,
+            'params': {}
+          };
+          document.write('<scr' + 'ipt type="text/javascript" src="https://www.profitabledisplaynetwork.com/your-adsterra-key/invoke.js"></scr' + 'ipt>');
+        </script>
+      </div>
+    </div> -->
+
+    <div class="tab-content" id="downloads-tab" style="display: none;">
+      <h2>📥 Downloads</h2>
+      <ul id="downloadList"></ul>
+    </div>
+
+    <div class="tab-content" id="settings-tab" style="display: none;">
+      <h2>⚙️ Settings</h2>
+      <label><input type="checkbox" id="darkModeToggle" /> Dark Mode</label>
+    </div>
+
+    <div class="bottom-nav">
+      <button onclick="switchTab('home-tab')">Home</button>
+      <button onclick="switchTab('downloads-tab')">Downloads</button>
+      <button onclick="switchTab('settings-tab')">Settings</button>
+    </div>
+  </div>
+</body>
+</html>

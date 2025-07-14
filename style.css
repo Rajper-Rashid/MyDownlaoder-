@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #e3f2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 420px;
+  height: 90vh;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(0, 150, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 22px;
+  color: #1976d2;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f0faff;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: linear-gradient(to right, #4fc3f7, #039be5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #29b6f6, #0288d1);
+  transform: scale(1.03);
+}
+
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Tabs Content */
+.tab-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  background: white;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Bottom Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to right, #4fc3f7, #03a9f4);
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tab-btn.active {
+  color: #fffde7;
+  text-shadow: 0 0 5px #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #e1f5fe;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
